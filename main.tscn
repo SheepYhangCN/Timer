@@ -1,0 +1,99 @@
+[gd_scene load_steps=6 format=3 uid="uid://vg0a0k4syknv"]
+
+[ext_resource type="FontFile" uid="uid://t67far1v3wxa" path="res://Resources/unifont.ttf" id="1_j234q"]
+[ext_resource type="Script" path="res://main.cs" id="2_pyxrs"]
+[ext_resource type="Script" path="res://Language.cs" id="2_yugj5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t3ccl"]
+
+[sub_resource type="Theme" id="Theme_7vyif"]
+default_font = ExtResource("1_j234q")
+default_font_size = 32
+Button/styles/focus = SubResource("StyleBoxEmpty_t3ccl")
+
+[node name="Main" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_7vyif")
+script = ExtResource("2_pyxrs")
+
+[node name="Language" type="OptionButton" parent="."]
+layout_mode = 0
+offset_right = 14.0
+offset_bottom = 20.0
+item_count = 9
+selected = 0
+popup/item_0/text = "English"
+popup/item_0/id = 0
+popup/item_1/text = "简体中文"
+popup/item_1/id = 1
+popup/item_2/text = "繁體中文"
+popup/item_2/id = 2
+popup/item_3/text = "文言文"
+popup/item_3/id = 3
+popup/item_4/text = "日本語"
+popup/item_4/id = 4
+popup/item_5/text = "Русский язык"
+popup/item_5/id = 5
+popup/item_6/text = "한국어"
+popup/item_6/id = 6
+popup/item_7/text = "Français"
+popup/item_7/id = 7
+popup/item_8/text = "Svenska"
+popup/item_8/id = 8
+script = ExtResource("2_yugj5")
+
+[node name="Time" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -176.0
+offset_top = -33.5
+offset_right = 176.0
+offset_bottom = 33.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = "00:00:00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartPause" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -175.0
+offset_top = -120.0
+offset_right = -39.0
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "locStart"
+
+[node name="Reset" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 38.0
+offset_top = -120.0
+offset_right = 174.0
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "locReset"
+
+[connection signal="pressed" from="StartPause" to="." method="_on_start_pause_pressed"]
