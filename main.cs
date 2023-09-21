@@ -6,7 +6,7 @@ public partial class main : Control
 	internal int h=0;
 	internal int m=0;
 	internal int s=0;
-	internal int ms=0;
+	internal double ms=0;
 	internal string ht="00";
 	internal string mt="00";
 	internal string st="00";
@@ -46,7 +46,7 @@ public partial class main : Control
 	{
 		if (start)
 		{
-			ms+=(int)(delta*100);
+			ms+=delta*100;
 		}
 		if (GetNode<Button>("Reset").ButtonPressed)
 		{
@@ -78,11 +78,11 @@ public partial class main : Control
 		}
 		if (ms<10)
 		{
-			mst="0"+ms.ToString();
+			mst="0"+((int)ms).ToString();
 		}
 		else
 		{
-			mst=ms.ToString();
+			mst=((int)ms).ToString();
 		}
 		if (s<10)
 		{
