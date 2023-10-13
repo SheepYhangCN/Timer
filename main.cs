@@ -14,7 +14,6 @@ public partial class main : Control
 	internal bool start=false;
 	public override void _Ready()
 	{
-		TranslationServer.SetLocale("en");
 		if (OS.GetLocaleLanguage() == "zh" || OS.GetLocale() == "zh_CN" || OS.GetLocale() == "zh_SG")
 		{
 		    TranslationServer.SetLocale("zh_CN");
@@ -22,10 +21,6 @@ public partial class main : Control
 		if (OS.GetLocale() == "zh_TW" || OS.GetLocale() == "zh_HK" || OS.GetLocale() == "zh_MO")
 		{
 		    TranslationServer.SetLocale("zh_TW");
-		}
-		if (OS.GetLocaleLanguage() == "ja" || OS.GetLocale() == "ja_JP")
-		{
-		    TranslationServer.SetLocale("ja");
 		}
 	}
 
