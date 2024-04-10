@@ -1,5 +1,5 @@
 keys;en;zh_CN;zh_TW;lzh;ja;ru;kr;fr;se
 locStart;Start;开始;開始;始;スタート;Начинаем;시작;Commencer;Start
 locPause;Pause;暂停;暫停;停;一時停止;Приостановление;일시 중지;Suspension;Paus
-locContinue;Continue;继续;繼續;继;継続;Продолжение;지속;Continuer;Fortsätt
+locResume;Resume;继续;繼續;继;続ける;Продолжение;지속;Continuer;Fortsätt
 locReset;Reset;重置;重置;复置;リセット;Сбросить;재설정;Réinitialisation;Återställ

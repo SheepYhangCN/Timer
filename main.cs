@@ -32,7 +32,7 @@ public partial class main : Control
 	{
 		if (start)
 		{
-			GetNode<Button>("StartPause").Text="locContinue";
+			GetNode<Button>("StartPause").Text="locResume";
 		}
 		else
 		{
